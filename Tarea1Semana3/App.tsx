@@ -21,12 +21,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#001aff',
+    backgroundColor: '#2036fa',
     alignItems: 'center',
     justifyContent: 'center',
   },
   card: {
     width: "90%",
+    height: "90%",
     backgroundColor: '#f1f1f4',
     borderRadius: 10,
     alignItems: 'center',

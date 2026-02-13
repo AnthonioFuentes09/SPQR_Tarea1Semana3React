@@ -12,7 +12,7 @@ export default function Ejercicio1() {
     return (
         <View style={styles.container}>
             <View style={styles.form}>
-                <Text style={styles.text}>Ejercicio 1</Text>
+                <Text style={styles.text}>Ejercicio 1 - Form para usuario</Text>
                 <TextInput
                     style={styles.input}
                     placeholder="Ingrese su nombre"
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     },
     text: {
         color: '#000000',
-        fontSize: 24,
+        fontSize: 20,
     },
     input: {
         height: 40,
