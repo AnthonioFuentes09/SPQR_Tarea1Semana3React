@@ -2,27 +2,27 @@ import { useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Ejercicio2() {
-
+    //Variables de estado
     const [contador, setContador] = useState(0);
     const [color, setColor] = useState('#0000ff');
 
-    const colorParImpar = () : void => {
-        if (contador % 2 === 0) {
+
+
+    const contadorChange = (nuevoValor: number) : void => {
+        setContador(nuevoValor);
+        if (nuevoValor % 2 === 0) {
             setColor('#0000ff');
         } else {
             setColor('#811e79');
         }
     }
 
-    const contadorChange = (nuevoValor: number) : void => {
-        setContador(nuevoValor);
-        colorParImpar();
-    }
-
     return (
         <View style={styles.container}>
+            {/* En todos los componentes se implemento el diseño de form, para mostrar un diseño mas limpio */}
             <View style={styles.form}>
                 <Text style={styles.text}>Ejercicio 2 - Contador con estados visuales</Text>
+                {/* Fila de botones por esquema de diseño */}
                 <View style={styles.filaBotones}>
                     <TouchableOpacity style={styles.boton} onPress={() => contadorChange(contador + 1)}>
                         <Text style={styles.buttonText}>+1</Text>
@@ -31,6 +31,7 @@ export default function Ejercicio2() {
                         <Text style={styles.buttonText}>-1</Text>
                     </TouchableOpacity>
                 </View>
+                {/* Bloque dinamico del contador segun estado de la variable contador */}
                 <View style={styles.bloqueResultados}>
                     <Text style={styles.resultadoContador}>
                         { contador >= 0 ? `Contador: ${contador}` : "No se recomienda valores negativos" }

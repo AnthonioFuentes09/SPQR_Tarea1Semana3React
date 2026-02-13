@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 
 export default function Ejercicio1() {
-
+    //Variables de estado
     const [nombre, setNombre] = useState("");
     const [edad, setEdad] = useState(0);
 
@@ -11,6 +11,7 @@ export default function Ejercicio1() {
 
     return (
         <View style={styles.container}>
+            {/* En todos los componentes se implemento el diseño de form, para mostrar un diseño mas limpio */}
             <View style={styles.form}>
                 <Text style={styles.text}>Ejercicio 1 - Form para usuario</Text>
                 <TextInput
@@ -26,6 +27,7 @@ export default function Ejercicio1() {
                     value={edad.toString()}
                     onChangeText={(text) => setEdad(parseInt(text) || 0)}
                 />
+                {/* Texto de resultado segun los valores ingresados */}
                     <Text style={styles.text}>Hola {nombre}, tienes {edad} años.</Text>
 
             </View>

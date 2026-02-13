@@ -6,9 +6,11 @@ import Ejercicio3 from './src/components/ejercicio3';
 
 export default function App() {
   return (
+    //se utilizo scrollView para que se pueda hacer scroll en caso de que el contenido sea mayor al tamaño de la pantalla
     <ScrollView >
       <View style={styles.container}>
         <View style={styles.card}>
+          {/* se anidaron todos los ejercicios en una sola columna para mejor visualizacion */}
           <Text style={{color: '#000000', fontSize: 30, fontWeight: 'bold'}}>Tarea 1 - Semana 3</Text>
           <StatusBar style="auto" />
           <Ejercicio1 />
